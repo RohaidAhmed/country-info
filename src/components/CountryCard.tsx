@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import LabelSpan from './ui/LabelSpan'
 import ValueSpan from './ui/ValueSpan'
+import Skeleton from './ui/Skeleton'
 
 
 export default function CountryCard(props: CountryProp) {
@@ -72,5 +73,32 @@ function CountryInfo({
                 </ValueSpan>
             </div>
         </div>
+    );
+}
+
+
+export function CountryCardSkeleton() {
+    return (
+        <div className='w-[288px] md:w-[272px] h-fit cursor-pointer rounded overflow-hidden shadow-xl group border-[1px] dark:border-slate-600'>
+            <Skeleton className='h-[168px]' />
+            <div className='pt-5 pl-2 pb-8'>
+                <Skeleton className='h-6 mb-4 w-[240px]' />
+            </div>
+            <section className='flex flex-col gap1 text-xl px-1'>
+                <div>
+                    <Skeleton className='mb-4 w-16' />
+                    <Skeleton className='mb-4 w-24' />
+                </div>
+                <div>
+                    <Skeleton className='mb-4 w-16' />
+                    <Skeleton className='mb-4 w-24' />
+                </div>
+                <div>
+                    <Skeleton className='mb-4 w-16' />
+                    <Skeleton className='mb-4 w-24' />
+                </div>
+            </section>
+        </div>
+
     );
 }

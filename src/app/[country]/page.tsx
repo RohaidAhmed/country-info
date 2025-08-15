@@ -17,11 +17,11 @@ export default async function page(countryName: string) {
     return (
         <div>
             <div>
-                <Image
+                {/* <Image
                     alt=''
                     width={600}
                     height={40}
-                    src={`${country.flags.png}`} />
+                    src={`${country.flags.png}`} /> */}
                 <div>
                     <span>No county for the name found</span>
                 </div>
@@ -33,11 +33,11 @@ export default async function page(countryName: string) {
 function CountryImage(){
     return(
         <div>
-            <Image
+            {/* <Image
                     alt=''
                     width={600}
                     height={40}
-                    src={`${}`} />
+                    src={`${}`} /> */}
 
         </div>
     );

@@ -98,7 +98,7 @@ export default function Home() {
             <CountryCard key={i} {...d} />
           ))
         }
-        {Array.isArray(filteredData) && filteredData.length < 1 && "error"}
+        {Array.isArray(filteredData) && filteredData.length < 1 && <NoSearchResults /> }
       </section>
     </div>
   );
@@ -107,7 +107,7 @@ export default function Home() {
 function NoSearchResults(){
   return (
     <div className="text-center text-gray-600 dark:text-gray-400 mt-8 w-full text-3xl font-semibold">
-      <p>Your search did not match any results :(</p>
+      <p>Your search did not match any results :( </p>
     </div>
   )
 }

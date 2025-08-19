@@ -4,14 +4,14 @@ import React from 'react'
 // import Image from 'next/image'
 import { CountryProp } from '@/lib/type'
 import { useQuery } from '@tanstack/react-query'
-import { fetchCountries } from '../action'
+import { fetchByCountryName, fetchCountries } from '../action'
 
 
 
-export default async function page(countryName: string) {
-    const response = await fetch(`https://restcountries.com/v3.1/${countryName}`);
-    const data = await response.json();
+export default function page(countryName: string) {
 
+    const data = fetchByCountryName(countryName);
+    
     const country = Array.isArray(data) && data.length > 0 ? data[0] : null;
 
     return (

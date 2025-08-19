@@ -10,13 +10,6 @@ type Props = {}
 
 export default function Navbar({ }: Props) {
 
-  const { setTheme, resolvedTheme } = useTheme();
-  
-
-  function toggleTheme() {
-    if (resolvedTheme === 'dark') setTheme('light');
-    else if (resolvedTheme === 'light') setTheme('dark');
-  }
 
   return (
     <div className='sticky top-0 z-50 shadow-xl dark:shadow-2xl'>
@@ -27,11 +20,8 @@ export default function Navbar({ }: Props) {
         >
           Where in the world?
         </Link>
-        <section onClick={toggleTheme} className='cursor-pointer flex items-center p-2 md:px-4 transition-all hover:opacity-80 gap-1'>
+        <section className='cursor-pointer flex items-center p-2 md:px-4 transition-all hover:opacity-80 gap-1'>
           <DarkThemeToggleBtn />
-          <div className='text-xl md:text-2xl md-1 font-semibold hidden md:block'>
-          Mode
-          </div>
         </section>
       </div>
     </div>

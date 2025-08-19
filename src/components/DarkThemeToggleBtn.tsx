@@ -37,6 +37,7 @@ const DarkAndLightBtn = () => {
                 size={30}
                 sunColor="#facc15" // optional
                 moonColor="#B3B9C4" // optional
+                
             />
         </div>
     );

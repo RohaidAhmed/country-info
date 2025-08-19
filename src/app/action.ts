@@ -12,3 +12,9 @@ export async function fetchCountries() {
 }
 
 
+export async function fetchByCountryName(countryName: string) {
+    const response = await fetch(`https://restcountries.com/v3.1/${countryName}`);
+    const data = await response.json();
+
+    return data;
+}

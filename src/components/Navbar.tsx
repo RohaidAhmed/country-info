@@ -1,9 +1,7 @@
 'use client';
 
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import React from 'react'
-// import { BsFillSunFill, BsMoonFill } from 'react-icons/bs';
 import DarkThemeToggleBtn from './DarkThemeToggleBtn';
 
 type Props = {}

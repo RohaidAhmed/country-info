@@ -9,7 +9,6 @@ type Props = {
 
 
 export default function LayoutContainer({ children }: Props) {
-    // const [queryClient] = useState(() => new QueryClient());
 
     const [mounted, setMounted] = useState(false);
     useEffect(() => {

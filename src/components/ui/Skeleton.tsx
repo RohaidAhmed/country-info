@@ -3,9 +3,7 @@ import React from 'react'
 
 
 export default function Skeleton({
-    className,
-    ...props
-}: React.HtmlHTMLAttributes<HTMLDivElement>) {
+    className}: React.HtmlHTMLAttributes<HTMLDivElement>) {
     return (
         <div 
         className={cn(

@@ -1,15 +1,15 @@
-type Flags = {
+export type Flags = {
     png: string;
     svg: string;
     alt: string;
 };
 
-type CoatOfArms = {
-    png: string;
-    svg: string;
-};
+// type CoatOfArms = {
+//     png: string;
+//     svg: string;
+// };
 
-type NativeName = {
+export type NativeName = {
     [key: string]: {
         official: string;
         common: string;
@@ -22,12 +22,12 @@ type Name = {
     nativeName: NativeName;
 };
 
-type Currency = {
+export type Currency = {
     name: string;
     symbol: string;
 };
 
-type Currencies = {
+export type Currencies = {
     [key: string]: Currency;
 };
 
@@ -35,14 +35,16 @@ type Languages = {
     [key: string]: string;
 };
 
-type Maps = {
+
+export type Maps = {
     googleMaps: string;
     openStreetMaps: string;
 };
 
 export type CountryProp = {
     flags: Flags;
-    coatOfArms: CoatOfArms;
+    // coatOfArms: CoatOfArms;
+    tld: string;
     name: Name;
     capital: string[];
     currencies: Currencies;
@@ -52,22 +54,3 @@ export type CountryProp = {
     maps: Maps;
     population: number;
 };
-
-// export type CountryProp = {
-//     name: Name;
-//     tld: string[]; // Property for top-level domain
-//     topLevelDomain: string[];
-//     population: number;
-//     currencies: {
-//         [key: string]: Currency;
-//     };
-//     languages: {
-//         [key: string]: string;
-//     };
-//     region: string;
-//     subregion: string;
-//     maps: Maps;
-//     capital?: string[];
-//     flags: Flags; // Property for country flag image
-//     coatOfArms: CoatOfArms; // Property for country coat of arms image
-// }

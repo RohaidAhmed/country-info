@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { CountryProp, Currencies, Maps, NativeName } from "@/lib/type";
+import { CountryProp, Maps, NativeName } from "@/lib/type";
 import { useQuery } from "@tanstack/react-query";
 import { fetchCountryByName } from "../action";
 import Link from "next/link";

@@ -4,9 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import DarkThemeToggleBtn from './DarkThemeToggleBtn';
 
-type Props = {}
-
-export default function Navbar({ }: Props) {
+export default function Navbar() {
 
 
   return (
